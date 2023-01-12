@@ -6,9 +6,9 @@ function loadConfig(callb:Function): any {
   const http = new XMLHttpRequest();
   http.onload = function() {
     const envObj: any =JSON.parse(this.responseText);
-    environment.api = envObj.api;
+    environment.api = 'https://backend-e7gez.onrender.com/api/v1';
     environment.production = envObj.production;
-
+console.log(environment);
 
     callb();
   }
